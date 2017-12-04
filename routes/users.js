@@ -188,7 +188,7 @@ router.post('/new', (req, res) => {
 
 // update user
 router.put('/new/:_id', (req, res) => {
-	console.log('putting to /user/new/'+req.params._id);
+	console.log('putting to /users/new/'+req.params._id);
 	var _id = req.params._id;
 	var updatedUser = req.body;
 	console.log(updatedUser);

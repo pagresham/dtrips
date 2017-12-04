@@ -154,7 +154,7 @@ router.delete('/api/activity/:id', function(req, res) {
 
 // get all entries
 router.get('/api/entry', function(req, res) {
-	// res.send('oh yeah')
+	console.log("get all entries");
 	Entry.getEntries(function(err, result) {
 		if(err)
 			console.log(err); 
