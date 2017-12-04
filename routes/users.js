@@ -38,6 +38,7 @@ var limit = 100;
 
 // get all
 router.get('/', function(req, res) {
+	console.log("Getting all users");
 	User.getUsers(function(err, result) {
 		if(err)
 			console.log(err.message) ;
@@ -53,6 +54,7 @@ router.get('/', function(req, res) {
 // get by ID
 router.get('/id/:_id', function(req, res) {
 	var _id = req.params._id;
+	console.log("Getting user with id1: " + _id);
 	console.log("ID: " +  _id);
 	User.findById(_id, function(err, result) {
 		if(err) {
@@ -69,6 +71,7 @@ router.get('/id/:_id', function(req, res) {
 // get by ID
 router.get('/id/{_id}', (req, res) => {
 	var _id = req.params._id;
+	console.log("Getting user with id2: " + _id);
 	console.log("ID: " +  _id);
 	User.findById(_id, function(err, result) {
 		if(err) {
@@ -90,6 +93,7 @@ router.get('/id/{_id}', (req, res) => {
 // get by Username
 router.get('/uname/:uname', (req, res) => {
 	var uname = req.params.uname;
+	console.log("Getting user with uname: " + uname);
 	console.log("Uname: " +  uname);
 	User.getByUserName(uname, function(err, result) {
 		if(err) {
